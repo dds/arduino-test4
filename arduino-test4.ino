@@ -1,13 +1,21 @@
 // include the library code:
-#include <LiquidCrystal.h>
+#include <LiquidCrystal_I2C.h>
 #include <Wire.h>
 
-#define REDLITE 3
-#define GREENLITE 5
-#define BLUELITE 6
+#define EN
+#define RW
+#define RS
+#define D4
+#define D5
+#define D6
+#define D7
+
+#define RED
+#define GREEN
+#define BLUE
 
 // initialize the library with the numbers of the interface pins
-LiquidCrystal lcd(7, 8, 9, 10, 11, 12);
+LiquidCrystal_I2C lcd(0x38, EN, RW, RS, D4, D5, D6, D7);
 
 // you can change the overall brightness by range 0 -> 255
 int brightness = 255;
